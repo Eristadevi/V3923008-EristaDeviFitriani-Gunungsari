@@ -54,3 +54,27 @@ export const createAdmin = async (admin) => {
   await db("users").insert(admin);
   return admin;
 };
+
+export const getAllUsers = async () => {
+  return await db("users")
+    .select(
+      "id",
+      "username",
+      "nama_lengkap",
+      "nomor_telepon",
+      "email",
+      "role",
+      "created_at",
+      "updated_at"
+    )
+    .orderBy("created_at", "asc");
+};
+
+export const updateUserById = async (id, data) => {
+  await db("users").where("id", id).update(data);
+  return await findUserById(id);
+};
+
+export const deleteUserById = async (id) => {
+  return await db("users").where("id", id).del();
+};

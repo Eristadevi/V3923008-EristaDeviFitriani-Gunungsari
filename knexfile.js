@@ -21,5 +21,9 @@ export default {
       directory: path.join(__dirname, "src", "migrations"),
       extension: "js",
     },
+    seeds: {
+      directory: path.join(__dirname, "src", "seeders"),
+      extension: "js",
+    },
   },
 };

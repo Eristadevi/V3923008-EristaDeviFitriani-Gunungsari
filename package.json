@@ -9,7 +9,8 @@
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
     "make:migration": "knex migrate:make",
-    "seed:admin": "node src/seeders/createAdmins.js"
+    "seed:admin": "node src/seeders/createAdmins.js",
+    "seed:paket": "node src/seeders/PaketWisata.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,9 @@
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "knex": "^3.2.10",
+    "midtrans-client": "^1.4.3",
+    "moment-timezone": "^0.6.2",
+    "multer": "^2.2.0",
     "mysql2": "^3.22.3",
     "uuid": "^14.0.0"
   },
